@@ -1,30 +1,46 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+  }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  // 搜索区域样式
+  .search{
+    padding-bottom: 6px;
+    font-size: 14px;
+    color:#666;
+    display: flex;
+    align-items: center;
+    *{
+      margin-right: 5px;
     }
   }
-}
+  // 分页区域样式
+  .pagination{
+    margin-top: 6px;
+  }
+
+  // 表单编辑项样式
+  .edititem{
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    margin-bottom: 10px;
+    &>span{
+      width: 70px;
+      text-align: right;
+      // 会导致 账号管理->添加中的添加按钮文字变成灰色，加一个 &> 就不会了
+      color: #666;
+    }
+    div{
+      flex: 1;
+    }
+  }
 </style>
